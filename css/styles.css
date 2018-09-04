@@ -180,3 +180,110 @@ h6 {
     display: none;
   }
 }
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.main-profile {
+  margin-top: 10%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileInfo {
+  width: 60%;
+}
+
+.titleMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileLogo {
+  padding-right: 80px;
+}
+
+.profileLogo img {
+  border-radius: 50%;
+  border: solid 1px #eee;
+  width: 152px;
+}
+
+.bioLink a {
+    color: #0f0f0f;
+}
+
+.titleMenu button {
+  height: 30px;
+  background-color: #4484FF;
+  border-radius: 5px;
+  color: white;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.titleMenu i {
+  margin-right: 50%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 780;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+}
+
+.galleryImg {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.overlay {
+  margin: 10px;
+  width: 240px;
+  height: 240px;
+  background-color: #000;
+}
+
+.galleryImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.galleryImg:hover img {
+  opacity: 0.5;
+}
+
+.middle {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 22px;
+}
+
+.galleryImg:hover .middle {
+  opacity: 1;
+}
