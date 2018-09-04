@@ -40,15 +40,22 @@ body {
   padding-right: 30px;
 }
 
-.sidebar {
 
-}
-
-.postHeader, .profile {
+.postHeader {
   display: flex;
   background-color: #fff;
   padding: 10px;
   border: solid 1px #eee;
+}
+
+.profile {
+  display: flex;
+  padding: 10px;
+  height: 36px;
+}
+
+.sidebar {
+  width: 250px;
 }
 
 .userImage {
@@ -75,6 +82,27 @@ body {
   justify-content: space-between;
 }
 
+.storiesHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storyWrapper {
+  height: 250px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.storyProfiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.storyProfiles .profile {
+  padding: 5px;
+}
+
 .bookmark {
   align-self: flex-end;
 }
@@ -86,4 +114,15 @@ h6 {
 
 .elipses {
   float: right;
+}
+
+.dumblinks {
+  margin-top: 10px;
+  display: flex;
+  font-size: 10px;
+  justify-content: center;
+}
+
+.dumblinks a {
+    color: #0f0f0f;
 }
