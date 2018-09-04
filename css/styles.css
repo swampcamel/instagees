@@ -208,6 +208,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
 }
 
 .profileLogo {
@@ -233,15 +234,13 @@ h6 {
   padding-right: 24px;
 }
 
-.titleMenu i {
-  margin-right: 50%;
-}
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
-  width: 780;
+  width: 780px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 42px;
@@ -287,3 +286,56 @@ h6 {
 .galleryImg:hover .middle {
   opacity: 1;
 }
+
+.bonusLikes {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: none;
+}
+
+.bLi {
+  width: 33.3%;
+  text-align: center;
+}
+
+.gRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 762px) {
+  .titleMenu {
+    flex-wrap: wrap;
+  }
+  .galleryImg, .overlay {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  .gRow {
+    width: 100%;
+    height: auto;
+  }
+  .gallery {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 735px) {
+  .bonusLikes {
+    display: flex;
+  }
+  .stats {
+    display: none;
+  }
