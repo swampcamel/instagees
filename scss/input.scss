@@ -1,0 +1,217 @@
+$navBarPad: 8px;
+$square: 240px;
+$bLikesBorder: 1px solid #efefef;
+$bLikesPad: 12px;
+$buttonPad: 24px;
+
+@mixin singleCol {
+  width: 100%;
+  height: auto;
+}
+
+@mixin spaceFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin centerOnPage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin squareIt {
+  width: $square;
+  height: $square;
+}
+
+.navbar {
+  @include spaceFlex;
+  @include centerOnPage;
+  align-items: center;
+  width: 80%;
+  padding-top: $navBarPad;
+  padding-bottom: $navBarPad;
+}
+
+.navbackground {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  border-bottom: 2px solid #eee;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 10%;
+  font-size: 24px;
+  display: relative;
+}
+
+.logotext {
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+}
+
+.icons i, .bottomBar i {
+  padding-right: 30px;
+}
+
+.search {
+  z-index: 2;
+}
+
+.main-profile {
+  margin-top: 10%;
+  width: 75%;
+  @include centerOnPage;
+}
+
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileLogo {
+  padding-right: 80px;
+  img {
+    border-radius: 50%;
+    border: solid 1px #eee;
+    width: 152px;
+  }
+}
+
+.profileInfo {
+  width: 60%;
+}
+
+.titleMenu {
+  @include spaceFlex;
+  align-items: center;
+  width: 70%;
+  button {
+    height: 30px;
+    background-color: #4484FF;
+    border-radius: 5px;
+    color: white;
+    padding-left: $buttonPad;
+    padding-right: $buttonPad;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.bioLink a {
+    color: #0f0f0f;
+}
+
+.bonusLikes {
+  @include spaceFlex;
+  list-style: none;
+  border-top: $bLikesBorder;
+  border-bottom: $bLikesBorder;
+  padding-top: $bLikesPad;
+  padding-bottom: $bLikesPad;
+  display: none;
+}
+
+.bLi {
+  width: 33.3%;
+  text-align: center;
+}
+
+.gallery {
+  @include spaceFlex;
+  @include centerOnPage;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 780px;
+  margin-top: 42px;
+}
+
+.gRow {
+  @include spaceFlex;
+}
+
+.overlay {
+margin: 10px;
+@include squareIt;
+background-color: #000;
+}
+
+.galleryImg {
+  position: relative;
+  @include squareIt;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &:hover img{
+    opacity: 0.5;
+  }
+}
+
+.middle {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    -webkit-transform: translate3d(0,0,0) scale(.8);
+    transform: translate3d(0,0,0) scale(.8);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .titleMenu {
+    flex-wrap: wrap;
+  }
+  .galleryImg, .overlay {
+    @include singleCol;
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  .gRow {
+    @include singleCol;
+  }
+  .gallery {
+    @include singleCol;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .bonusLikes {
+    display: flex;
+  }
+  .stats {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .search {
+    display: none;
+  }
+}

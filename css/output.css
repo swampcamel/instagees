@@ -1,0 +1,207 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 80%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.navbackground {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  border-bottom: 2px solid #eee;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 10%;
+  font-size: 24px;
+  display: relative;
+}
+
+.logotext {
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+}
+
+.icons i, .bottomBar i {
+  padding-right: 30px;
+}
+
+.search {
+  z-index: 2;
+}
+
+.main-profile {
+  margin-top: 10%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileLogo {
+  padding-right: 80px;
+}
+.profileLogo img {
+  border-radius: 50%;
+  border: solid 1px #eee;
+  width: 152px;
+}
+
+.profileInfo {
+  width: 60%;
+}
+
+.titleMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.titleMenu button {
+  height: 30px;
+  background-color: #4484FF;
+  border-radius: 5px;
+  color: white;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.bioLink a {
+  color: #0f0f0f;
+}
+
+.bonusLikes {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: none;
+}
+
+.bLi {
+  width: 33.3%;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 780px;
+  margin-top: 42px;
+}
+
+.gRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay {
+  margin: 10px;
+  width: 240px;
+  height: 240px;
+  background-color: #000;
+}
+
+.galleryImg {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+}
+.galleryImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.galleryImg:hover img {
+  opacity: 0.5;
+}
+
+.middle {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.8);
+    transform: translate3d(0, 0, 0) scale(0.8);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+}
+@media screen and (max-width: 762px) {
+  .titleMenu {
+    flex-wrap: wrap;
+  }
+
+  .galleryImg, .overlay {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .gRow {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 735px) {
+  .bonusLikes {
+    display: flex;
+  }
+
+  .stats {
+    display: none;
+  }
+}
+@media screen and (max-width: 470px) {
+  .search {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
